@@ -14,6 +14,7 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 header {
@@ -180,4 +181,41 @@ footer {
 .copyright {
     margin-top: 20px;
     font-size: 14px;
+}
+.review-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    margin: 0 2.5%; /* Отступ между отзывами */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
 }

@@ -26,15 +26,15 @@
 
     <section id="slider">
         <div class="container">
-            <div class="slide">
+            <div class="slide1">
                 <h2>Уникальные животные</h2>
                 <p>Откройте для себя редких животных!</p>
             </div>
-            <div class="slide">
+            <div class="slide1">
                 <h2>Встреча с природой</h2>
                 <p>Испытайте незабываемые эмоции!</p>
             </div>
-            <div class="slide">
+            <div class="slide1">
                 <h2>Забота и уход</h2>
                 <p>Наши животные всегда под присмотром!</p>
             </div>
@@ -97,25 +97,42 @@
         <div class="container">
             <h2>Отзывы посетителей</h2>
             <div class="review-slider">
-                <div class="review">
-                    <p>Замечательное место для семейного отдыха!</p>
-                    <h3>Александр Петров</h3>
+                <div class="slide">
+                    <div class="review">
+                        <p>Замечательное место для семейного отдыха!</p>
+                        <h3>Александр Петров</h3>
+                    </div>
+                    <div class="review">
+                        <p>Дети в восторге! Спасибо за потрясающие впечатления!</p>
+                        <h3>Екатерина Смирнова</h3>
+                    </div>
                 </div>
-                <div class="review">
-                    <p>Дети в восторге! Спасибо за потрясающие впечатления!</p>
-                    <h3>Екатерина Смирнова</h3>
+                <div class="slide">
+                    <div class="review">
+                        <p>Лучший зоопарк, который я когда-либо посещал!</p>
+                        <h3>Михаил Иванов</h3>
+                    </div>
+                    <div class="review">
+                        <p>Очень ухоженные животные и приятная атмосфера!</p>
+                        <h3>Мария Петрова</h3>
+                    </div>
                 </div>
-                <div class="review">
-                    <p>Лучший зоопарк, который я когда-либо посещал!</p>
-                    <h3>Михаил Иванов</h3>
-                </div>
-                <div class="review">
-                    <p>Очень ухоженные животные и приятная атмосфера!</p>
-                    <h3>Мария Петрова</h3>
+                <div class="slide">
+                    <div class="review">
+                        <p>Отличное место для отдыха с друзьями!</p>
+                        <h3>Иван Сидоров</h3>
+                    </div>
+                    <div class="review">
+                        <p>Всё очень понравилось, обязательно вернусь!</p>
+                        <h3>Анна Кузнецова</h3>
+                    </div>
                 </div>
             </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
+    
 
     <!-- Подвал -->
     <footer>
@@ -139,4 +156,30 @@
     </footer>
 
 </body>
+<script>
+  let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    
+    // Проверка границ
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    
+    const offset = -currentSlide * 100;
+    slides[0].parentNode.style.transform = `translateX(${offset}%)`;
+}
+
+function moveSlide(step) {
+    showSlide(currentSlide + step);
+}
+
+showSlide(currentSlide);
+
+</script>
 </html>
