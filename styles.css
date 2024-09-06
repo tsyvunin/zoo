@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-right: 300px;
+}
+.ull{
+    width: 300px;
+    display: flex;
+    gap: 50px;
+    margin-top: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.call-btn {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 600px;
+}
+
+#slider {
+    background-color: #F5F5F5;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#slider .slide {
+    margin-bottom: 30px;
+}
+
+#slider h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#employees {
+    background-color: #FFF;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#employees h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.employee-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.employee {
+    text-align: center;
+}
+
+.employee img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#animals {
+    background-color: #F5F5F5;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#animals h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.animal img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.animal.large {
+    grid-column: span 2;
+}
+
+.animal.medium {
+    grid-column: span 2;
+}
+
+#reviews {
+    background-color: #FFF;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.review-slider {
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+}
+
+.review {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contacts p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
